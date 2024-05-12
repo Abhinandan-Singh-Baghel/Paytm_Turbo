@@ -22,9 +22,16 @@ export async function p2pTransfer(to: string, amount: number) {
             message: "User not found"
         }
     }
-
+    
     await prisma.$transaction(async (tx) => {
-        await tx.$queryRaw
+        await tx.$queryRaw`SELECT * FROM "Balance" WHERE "userId" = ${Number(from)} FOR UPDATE`;
+
+        const fromBalance = await tx.balance.findUnique({
+            where: { userId: Number(from)},
+        });
+        if(!fromBalance || fromBalance.amount < amount){
+            throw new Error('Insufficient Funds');
+        }
     })
 
 }
