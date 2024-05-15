@@ -27,7 +27,6 @@ const ClearSessionPage = () => {
 
   return (
     <div>
-      <h1 className='text-l pb-3'>Clear Session</h1>
       <button 
   onClick={handleClearSession} 
   className={`px-3 py-1 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-400`}
