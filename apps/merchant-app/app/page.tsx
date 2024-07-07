@@ -1,9 +1,9 @@
 "use client";
 
-import { useBalance } from "@repo/store/balance";
+import { userBalance } from "@repo/store/useBalance";
 
 export default function() {
-  const balance = useBalance();
+  const balance = userBalance();
   return <div>
     hi there {balance}
   </div>
