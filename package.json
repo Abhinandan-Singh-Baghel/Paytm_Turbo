@@ -16,6 +16,7 @@
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
     "turbo": "latest",
+    "db:generate": "cd packages/db && npx prisma generate && cd ../..",
     "start-user-app": "cd ./apps/user-app && npm run start"
   },
   "engines": {
