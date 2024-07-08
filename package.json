@@ -15,7 +15,8 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
-    "turbo": "latest"
+    "turbo": "latest",
+    "start-user-app": "cd ./apps/user-app && npm run start"
   },
   "engines": {
     "node": ">=18"
