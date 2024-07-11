@@ -8,10 +8,14 @@ COPY apps ./apps
 COPY packages ./packages
 
 #Install dependencies
-RUN npm install
+RUN npm install -g npm@latest
+RUN npm install -g next
+
+
+
 
 RUN npm run db-generate
 
-RUN npm run build
+
 
 CMD [ "npm", "run", "start-user-app" ]
